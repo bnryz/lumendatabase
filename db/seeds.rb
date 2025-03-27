@@ -11,7 +11,6 @@ seed_files = %w[
   topics.rb
   relevant_questions.rb
   risk_triggers.rb
-  users.rb
 ]
 
 seed_files.each { |file| load("db/seeds/#{file}") }
