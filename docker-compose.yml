@@ -61,14 +61,9 @@ services:
     depends_on:
       - 'elasticsearch'
       - 'postgres'
-    build:
-      context: .
-      dockerfile: Dockerfile-logstash
-    command: logstash --path.settings /app/script/search_indexing/
-    volumes:
-      - '.:/app:ro'
+    build: script/search_indexing
     tmpfs:
-      - /user/share/logstash/data
+      - /usr/share/logstash/data
     environment:
       LS_JAVA_OPTS: "-Xmx2g -Xms2g"
 
@@ -81,6 +76,5 @@ services:
 volumes:
   postgres:
   esdata:
-  logstash:
   docker_website_bash_history:
   redis:
