@@ -1,0 +1,16 @@
+.bundle
+.circleci
+.env.*
+.dockerignore
+.git
+.github
+.gitignore
+.rspec
+.rubocop.yml
+.ruby-version
+CHANGELOG.md
+Dockerfile
+LICENSE.txt
+Procfile
+Procfile.dev
+README.md
