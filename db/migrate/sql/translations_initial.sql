@@ -182,7 +182,7 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (128, 'submitter_widget_notice_new_what_type', NULL, '<h1>What type of takedown request are you making?</h1>', '2022-09-19 15:27:51.596898', '2022-09-19 15:27:51.596898');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (129, 'notice_new_works_enter', NULL, '<p>Enter information about the original work(s) and allegedly infringing URL(s).</p>', '2022-09-19 15:30:03.939801', '2022-09-19 15:30:03.939801');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (130, 'notice_new_step_1', NULL, '<h4><span>Step 1.</span> Describe the Notice</h4>', '2022-09-19 15:54:02.556744', '2022-09-19 15:54:02.556744');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (131, 'notice_new_provide_us', NULL, '<p>Provide us with information about the %{type} you <em>sent</em> or <em>received</em>.</p>', '2022-09-19 15:56:46.194111', '2022-09-19 15:56:46.194111');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (131, 'notice_new_provide_us', NULL, '<p>Provide information about the %{type}.</p>', '2022-09-19 15:56:46.194111', '2022-09-19 15:56:46.194111');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (132, 'notice_new_works_step_2', NULL, '<h4><span>Step 2.</span> Original Works in Question</h4>', '2022-09-19 16:39:26.708451', '2022-09-19 16:39:26.708451');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (133, 'notice_new_works_step_2_info', NULL, '<p>Enter information about the original work(s) and %{urls_type} URL(s).</p>', '2022-09-19 16:41:57.967583', '2022-09-19 16:41:57.967583');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (134, 'notice_new_public_disabled_title', NULL, 'Public Submission Disabled', '2022-09-19 16:45:18.364609', '2022-09-19 16:45:18.364609');
@@ -203,10 +203,7 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (146, 'notice_show_documents_supporting', NULL, 'Supporting Documents', '2022-09-19 18:54:49.85902', '2022-09-19 18:54:49.85902');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (147, 'notice_show_documents_supporting_see', NULL, 'Click here to get access to this file', '2022-09-19 18:55:53.23948', '2022-09-19 18:55:53.23948');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (148, 'notice_show_documents_supporting_type', NULL, 'Supporting %{type}', '2022-09-19 18:56:47.936802', '2022-09-19 18:56:47.936802');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (149, 'notice_new_select_info', NULL, '<h1>Which type of demand would you like to report?</h1>
-<p>
-  <b>To help us serve you better, we ask that you submit only notices you have received, not items you have heard about second-hand, and that you add only information whose accuracy you can verify. We may mask additional identifying information before making the notice publicly viewable.</b>
-</p>', '2022-09-19 18:58:29.572878', '2022-09-19 19:00:15.261835');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (149, 'notice_new_select_info', NULL, '<h1>Which type of demand would you like to report?</h1>', '2022-09-19 18:58:29.572878', '2022-09-19 19:00:15.261835');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (150, 'notice_show_rescinded', NULL, '<h3>Notice Rescinded</h3>', '2022-09-19 19:01:26.366621', '2022-09-19 19:01:26.366621');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (151, 'rss_recent_notices_title', NULL, 'Recent Notices from Lumen Database', '2022-09-19 19:02:28.900611', '2022-09-19 19:02:28.900611');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (152, 'rss_recent_notices_author', NULL, 'Lumen Database', '2022-09-19 19:03:12.600153', '2022-09-19 19:03:12.600153');
@@ -318,13 +315,17 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (237, 'notice_show_priv_inf_works_label', NULL, '<h4>Complaint %{index}</h4>', '2022-09-21 08:11:39.595988', '2022-09-21 08:11:39.595988');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (238, 'notice_show_tradem_works_label', NULL, '<h4>Complaint %{index}</h4>', '2022-09-21 08:12:24.438777', '2022-09-21 08:12:24.438777');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (240, 'api_submitter_widget_request_page_title', NULL, 'Apply for submitter JS plugin access', '2022-09-21 10:08:42.999228', '2022-09-21 10:08:42.999228');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (241, 'notice_type_descriptions_Ban', NULL, 'Is an account on a platform facing a ban?', '2022-09-18 12:26:40.251257', '2022-09-18 12:27:26.414915');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (242, 'notice_new_ban_header', NULL, 'account ban notice', '2022-09-18 12:26:40.251257', '2022-09-18 12:27:26.414915');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (243, 'notice_type_descriptions_Takedown', NULL, 'Is content on a platform facing a takedown <b>without</b> the originating account being banned?', '2022-09-18 12:26:40.251257', '2022-09-18 12:27:26.414915');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (244, 'notice_new_takedown_header', NULL, 'content takedown notice', '2022-09-18 12:26:40.251257', '2022-09-18 12:27:26.414915');
 
 
 --
 -- Name: translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: lumen
 --
 
-SELECT pg_catalog.setval('public.translations_id_seq', 240, true);
+SELECT pg_catalog.setval('public.translations_id_seq', 244, true);
 
 
 --

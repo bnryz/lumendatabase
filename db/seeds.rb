@@ -182,54 +182,82 @@ unless ENV['SKIP_FAKE_DATA']
   # Necessary to ensure we can see all the notice subclasses
   Chill::Application.eager_load!
 
-  count = (ENV['NOTICE_COUNT'] || '500').to_i
+  # count = (ENV['NOTICE_COUNT'] || '500').to_i
 
-  print "\n--> Generating #{count} Fake Notices"
+  # print "\n--> Generating #{count} Fake Notices"
+  Ban.create!({
+    body: 'From Bluesky (moderation@blueskyweb.xyz) on Sunday, 24 November 2024 at 18:09:
 
-  count.times do
-    fake = FakeNotice.new
+A Bluesky account you control (@virped.org) posted content that supports pedophilia or the sexual exploitation of minors, which is in violation of our Community Guidelines. As a responsible service, we cannot condone any behavior that compromises the safety or violates the rights of minors. As a result of these violations, we have taken down your account. We trust that you will understand the necessity of these measures and the gravity of the situation. You cannot use Bluesky to break the law or cause harm to others.
+--
 
-    random_notice_class = Notice.subclasses.sample
+From Virpeds (hey@virped.org) on 24 November 2024 at 18:09:
 
-    fake_attributes = {
-      title: fake.title,
-      subject: fake.subject,
-      date_sent: fake.date_sent,
-      date_received: fake.date_received,
-      source: fake.source,
-      topic_ids: fake.topics.map(&:id),
-      tag_list: fake.tags,
-      jurisdiction_list: fake.jurisdictions,
-      body: fake.body,
-      body_original: fake.body_original,
-      review_required: fake.review_required,
-      language: fake.language,
-      works_attributes: [{
-        description: fake.work_description,
-        kind: fake.kind,
-        infringing_urls_attributes: fake.infringing_urls,
-        copyrighted_urls_attributes: fake.copyrighted_urls
-      }],
-      entity_notice_roles_attributes: [{
-        name: 'recipient', entity_attributes: fake.recipient
-      }, {
-        name: 'sender', entity_attributes: fake.sender
-      }, {
-        name: 'principal', entity_attributes: fake.principal
-      }, {
-        name: 'submitter', entity_attributes: fake.submitter
-      }]
-    }
+We wish to appeal this decision. We are an organisation that is clearly and explicitly opposed to child sexual abuse and we discuss pedophilia only in this context and in this way. We do not promote pedophilia as an identity, but draw attention to the plight of those who develop this attraction. We have been established for over 10 years doing this work and are endorsed by scientists, survivors of childhood sexual abuse and others https://virped.org/oursupporters',
+    entity_notice_roles_attributes: [
+      {
+        entity_attributes: {
+          name: 'Virpeds'
+        },
+        name: 'recipient'
+      },
+      {
+        entity_attributes: {
+          name: 'Bluesky'
+        },
+        name: 'sender'
+      }
+    ],
+    title: 'Ban action against Virpeds',
+    works_attributes: [{}]
+  })
+  # for err in notice.errors
+  #   puts err
+  # end
 
-    if random_notice_class.respond_to?(:regulation_counts)
-      fake_attributes.merge!(regulation_list: fake.regulations)
-    end
+  # count.times do
+  #   fake = FakeNotice.new
 
-    random_notice_class.create!(
-      fake_attributes
-    )
+  #   random_notice_class = Notice.subclasses.sample
 
-    print '.'
-  end
+  #   fake_attributes = {
+  #     title: fake.title,
+  #     subject: fake.subject,
+  #     date_sent: fake.date_sent,
+  #     date_received: fake.date_received,
+  #     source: fake.source,
+  #     topic_ids: fake.topics.map(&:id),
+  #     tag_list: fake.tags,
+  #     jurisdiction_list: fake.jurisdictions,
+  #     body: fake.body,
+  #     body_original: fake.body_original,
+  #     review_required: fake.review_required,
+  #     language: fake.language,
+  #     works_attributes: [{
+  #       description: fake.work_description,
+  #       kind: fake.kind,
+  #       infringing_urls_attributes: fake.infringing_urls,
+  #       copyrighted_urls_attributes: fake.copyrighted_urls
+  #     }],
+  #     entity_notice_roles_attributes: [{
+  #       name: 'recipient', entity_attributes: fake.recipient
+  #     }, {
+  #       name: 'sender', entity_attributes: fake.sender
+  #     }, {
+  #       name: 'principal', entity_attributes: fake.principal
+  #     }, {
+  #       name: 'submitter', entity_attributes: fake.submitter
+  #     }]
+  #   }
 
+  #   if random_notice_class.respond_to?(:regulation_counts)
+  #     fake_attributes.merge!(regulation_list: fake.regulations)
+  #   end
+
+  #   random_notice_class.create!(
+  #     fake_attributes
+  #   )
+
+  #   print '.'
+  # end
 end
