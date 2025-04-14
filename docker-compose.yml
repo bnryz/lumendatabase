@@ -63,7 +63,7 @@ services:
     env_file:
       - .env
 
-  website:
+  app:
     depends_on:
       schema:
         condition: service_completed_successfully
@@ -77,9 +77,17 @@ services:
     env_file:
       - .env
 
+  http:
+    depends_on:
+      app:
+        condition: service_healthy
+    build: http
+    ports:
+      - 8080:80
+
   jobs:
     depends_on:
-      website:
+      app:
         condition: service_healthy
     build: .
     volumes:
