@@ -276,7 +276,8 @@ queue.type: persisted
 #   * debug
 #   * trace
 #
-# log.level: info
+# github/logstash-plugins/logstash-input-jdbc#208
+log.level: warn
 path.logs: /log/logstash
 #
 # ------------ Other Settings --------------
