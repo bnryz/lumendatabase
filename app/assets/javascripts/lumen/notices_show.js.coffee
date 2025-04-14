@@ -14,8 +14,8 @@ toggleFirstTimeContent = ->
       $.cookie('returning-visitor', 'returning', { expires: 365 } )
 
 $ ->
-  if typeof($.cookie('returning-visitor')) == 'undefined'
-    toggleFirstTimeContent()
+  # if typeof($.cookie('returning-visitor')) == 'undefined'
+  #   toggleFirstTimeContent()
 
 $('.first-time-visitor').click ->
   toggleFirstTimeContent()
