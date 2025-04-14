@@ -17,7 +17,16 @@
   <% cache_unless(Current.user&.role?(Role.super_admin), 'lumendatabase-tweets', expires_in: 5.minutes ) { %>
     <section class="tweets">
       <h2><%= Translation.t('home_lumendatabase_on_twitter') %></h2>
-      <a class="twitter-timeline" data-height="380" href="https://twitter.com/lumendatabase?ref_src=twsrc%5Etfw"><%= Translation.t('home_tweets_by_lumendatabase') %></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:mzbjdwq2tkhttzjqbu34sa2n/app.bsky.feed.post/3lconbqe3n222" data-bluesky-cid="bafyreiaibfuw7llmrz7defnnzp27mcvc4ryteat7ijyumekbygzr6zwfpa"><p lang="en">Hello Bluesky! We&#x27;re a new nonprofit providing fiscal sponsorship for independent projects that promote online safety and liberty.
+
+Our four priority areas are:
+
+* Safer Hosting
+* Supporting Fans
+* Cyberbullying and Abuse
+* Legal Advocacy
+
+Read more on our website and spread the word!</p>&mdash; Center for Online Safety and Liberty (<a href="https://bsky.app/profile/did:plc:mzbjdwq2tkhttzjqbu34sa2n?ref_src=embed">@c4osl.org</a>) <a href="https://bsky.app/profile/did:plc:mzbjdwq2tkhttzjqbu34sa2n/post/3lconbqe3n222?ref_src=embed">Dec 7, 2024 at 2:23 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
     </section>
   <% } %>
   <section class="news-snippets">

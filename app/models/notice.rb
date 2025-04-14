@@ -60,8 +60,8 @@ class Notice < ApplicationRecord
     ResultOrdering.new('relevancy asc', [:_score, :asc], 'Least Relevant'),
     ResultOrdering.new('date_received desc', [:date_received, :desc], 'Date Received - newest'),
     ResultOrdering.new('date_received asc', [:date_received, :asc], 'Date Received - oldest'),
-    ResultOrdering.new('created_at desc', [:created_at, :desc], 'Reported to Lumen - newest'),
-    ResultOrdering.new('created_at asc', [:created_at, :asc], 'Reported to Lumen - oldest')
+    ResultOrdering.new('created_at desc', [:created_at, :desc], 'Date Archived - newest'),
+    ResultOrdering.new('created_at asc', [:created_at, :asc], 'Date Archived - oldest')
   ].freeze
 
   REDACTABLE_FIELDS = %i[body].freeze

@@ -8,7 +8,7 @@ If you want to appeal contact the Lumen staff at team@lumendatabase.org.
 
 Thank you,
 Lumen Database team', '2022-09-17 16:41:11.694754', '2022-09-17 16:41:11.694754');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (3, 'home_lumendatabase_on_twitter', NULL, '@lumendatabase on twitter', '2022-09-15 16:45:13.383924', '2022-09-15 16:48:24.354581');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (3, 'home_lumendatabase_on_twitter', NULL, '@c4osl.org on bluesky', '2022-09-15 16:45:13.383924', '2022-09-15 16:48:24.354581');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (5, 'home_from_the_blog', NULL, 'From the Blog', '2022-09-15 17:14:42.29334', '2022-09-15 17:14:42.29334');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (24, 'mailers_api_submitter_request_approved', NULL, 'Hi,
 
@@ -50,7 +50,7 @@ If you have any questions, please contact our team, team@lumendatabase.org.
 
 Lumen Database', '2022-09-17 17:25:59.981039', '2022-09-17 17:25:59.981039');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (31, 'notice_works_infringing_urls', NULL, 'Infringing URLs:', '2022-09-18 10:16:55.201232', '2022-09-18 10:16:55.201232');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (1, 'home_about_text', NULL, 'The Lumen database collects and analyzes legal complaints and requests for removal of online materials, helping Internet users to know their rights and understand the law. These data enable us to study the prevalence of legal threats and let Internet users see the source of content removals.', '2022-09-15 14:40:14.656216', '2022-09-15 18:47:27.122065');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (1, 'home_about_text', NULL, 'The Harmful to Minors project is dedicated to archiving takedown and suspension notices pertaining to sex and gender, which frequently utilize the excuse of such content being "harmful to minors". In doing so, we aim to provide more transparency into these requests and hold those who make these requests to a higher standard of accountability.', '2022-09-15 14:40:14.656216', '2022-09-15 18:47:27.122065');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (15, 'blog_archive_page_title', NULL, 'Blog Archive', '2022-09-16 09:47:37.08504', '2022-09-16 09:49:12.267719');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (16, 'blog_archive_xml_title', NULL, 'Lumen Database Blog', '2022-09-16 09:50:07.068195', '2022-09-16 09:50:07.068195');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (17, 'blog_archive_xml_author', NULL, 'Lumen Database', '2022-09-16 09:50:55.233588', '2022-09-16 09:50:55.233588');

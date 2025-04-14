@@ -17,7 +17,7 @@
         <%= link_to(result.recipient_name, faceted_search_path(recipient_name: result.recipient_name), class: 'receiver')%>
       <% end %>
     </div>
-    <div class="date-submitted">Reported to Lumen: <%= date_submitted(result) %></div>
+    <div class="date-submitted">Date Archived: <%= date_submitted(result) %></div>
     <ol class="excerpt">
       <% if can?(:view_full_version, Notice) %>
         <% result.highlight.each do |highlight_elem| %>
