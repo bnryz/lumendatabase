@@ -1,44 +1,37 @@
-version: '2'
-
 services:
   postgres:
     image: docker.io/library/postgres:13.6-alpine
     volumes:
-      - 'postgres:/var/lib/postgresql/data'
-      - '.:/app'
+      - postgres:/var/lib/postgresql/data
     env_file:
-      - '.env'
+      - .env
     environment:
       POSTGRES_USER: ${DATABASE_DEV_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_DEV_PASSWORD}
 
   website:
     depends_on:
-      - 'postgres'
+      - postgres
     build: .
     ports:
-      - '8282:3000'
-      - '1080:1080'
+      - 8282:3000
     volumes:
       - '.:/app'
       - docker_website_bash_history:/home/lumen/hist
     env_file:
-      - '.env'
+      - .env
     environment:
       HISTFILE: /home/lumen/hist/.bash_history
 
   elasticsearch:
     image: docker.io/library/elasticsearch:7.17.26
     environment:
-      - http.host=0.0.0.0
-      - transport.host=0.0.0.0
-      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
-      - discovery.type=single-node
+      http.host: 0.0.0.0
+      transport.host: 0.0.0.0
+      ES_JAVA_OPTS: -Xms2g -Xmx2g
+      discovery.type: single-node
     volumes:
       - esdata:/usr/share/elasticsearch/data
-    ports:
-      - 9200:9200
-      - 9300:9300
     ulimits:
       memlock:
         soft: -1
@@ -50,17 +43,15 @@ services:
 
   kibana:
     depends_on:
-      - 'elasticsearch'
+      - elasticsearch
     image: docker.io/library/kibana:7.17.0
-    ports:
-      - 5601:5601
 
   logstash:
     env_file:
-      - '.env'
+      - .env
     depends_on:
-      - 'elasticsearch'
-      - 'postgres'
+      - elasticsearch
+      - postgres
     build:
       context: .
       dockerfile: Dockerfile-logstash
@@ -70,13 +61,13 @@ services:
     tmpfs:
       - /user/share/logstash/data
     environment:
-      LS_JAVA_OPTS: "-Xmx2g -Xms2g"
+      LS_JAVA_OPTS: -Xmx2g -Xms2g
 
   redis:
     image: docker.io/library/redis:7.2
     command: redis-server
     volumes:
-      - 'redis:/data'
+      - redis:/data
 
 volumes:
   postgres:
