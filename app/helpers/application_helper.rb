@@ -11,7 +11,7 @@ module ApplicationHelper
     full_title = [
       page_description,
       page_header,
-      'Lumen'
+      'Child Safety Transparency Archive'
     ].compact.join(' :: ')
 
     content_for(:title) { full_title }
