@@ -30,8 +30,8 @@ tmp/
 bin/stubs
 bin/init-env.sh
 coverage/*
+http/public/assets/
 paperclip/*
-public/assets
 rerun.txt
 tags
 vendor/bundler_gems

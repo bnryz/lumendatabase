@@ -118,5 +118,7 @@ module Chill
     config.to_prepare do
       ActiveRecord::Base.singleton_class.include(DatabaseUtils)
     end
+
+    config.paths['public'] = Rails.root.join('http', 'public')
   end
 end
