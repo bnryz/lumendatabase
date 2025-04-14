@@ -14,6 +14,7 @@ class Notices::SearchController < SearchController
     @url_root = URL_ROOT
     @search_all_placeholder = 'Search all notices...'
     @facet_search_index_path = facet_notices_search_index_path
+    @skip_captcha = true
   end
 
   def item_searcher
