@@ -9,21 +9,9 @@ services:
       POSTGRES_USER: ${DATABASE_DEV_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_DEV_PASSWORD}
 
-  website:
-    depends_on:
-      - postgres
-    build: .
-    ports:
-      - 8282:3000
-    volumes:
-      - '.:/app'
-      - docker_website_bash_history:/home/lumen/hist
-    env_file:
-      - .env
-    environment:
-      HISTFILE: /home/lumen/hist/.bash_history
-
   elasticsearch:
+    healthcheck:
+      test: ['CMD', 'curl', '-f', '127.0.0.1:9200']
     image: docker.io/library/elasticsearch:7.17.26
     environment:
       http.host: 0.0.0.0
@@ -69,9 +57,43 @@ services:
     volumes:
       - redis:/data
 
+  schema:
+    build: .
+    command: [rake, db:migrate, 'comfy:cms_seeds:import[lumen_cms,lumen_cms]', db:seed]
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+      postgres:
+        condition: service_started
+    env_file:
+      - .env
+
+  website:
+    depends_on:
+      schema:
+        condition: service_completed_successfully
+    build: .
+    healthcheck:
+      test: ['CMD', 'wget', '-q', '--spider', '127.0.0.1:3000']
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/srv
+    env_file:
+      - .env
+
+  jobs:
+    depends_on:
+      website:
+        condition: service_healthy
+    build: .
+    volumes:
+      - .:/srv
+    env_file:
+      - .env
+    command: bundle exec sidekiq
+
 volumes:
   postgres:
   esdata:
-  logstash:
-  docker_website_bash_history:
   redis:
