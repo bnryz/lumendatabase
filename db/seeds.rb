@@ -9,9 +9,6 @@ Entity.__elasticsearch__.create_index! force: true
 # Execute seeds in a logical order
 seed_files = %w[
   topics.rb
-  relevant_questions.rb
-  risk_triggers.rb
-  users.rb
 ]
 
 seed_files.each { |file| load("db/seeds/#{file}") }
