@@ -38,16 +38,10 @@ services:
     env_file:
       - .env
     depends_on:
-      - elasticsearch
-      - postgres
-    build:
-      context: .
-      dockerfile: Dockerfile-logstash
-    command: logstash --path.settings /app/script/search_indexing/
-    volumes:
-      - '.:/app:ro'
+      - schema
+    build: script/search_indexing
     tmpfs:
-      - /user/share/logstash/data
+      - /usr/share/logstash/data
     environment:
       LS_JAVA_OPTS: -Xmx2g -Xms2g
 
