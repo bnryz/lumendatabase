@@ -55,13 +55,13 @@ class Ability
       can :update, :all
       cannot :update, [User, Role]
 
-      can :publish, Notice
-      can :rescind, Notice
-      can :create, Notice
+      can :manage, Entity
+      can :manage, EntityNoticeRole
+      can :manage, MediaMention
+      can :manage, Notice
+      can :manage, RelevantQuestion
+      can :manage, Topic
       can :create, Work
-      can :create, Entity
-      can :create, EntityNoticeRole
-      can :create, MediaMention
 
       can :pdf_requests, :all
       can :view_full_version, Notice
