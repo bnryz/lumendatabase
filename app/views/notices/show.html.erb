@@ -69,7 +69,9 @@
       </header>
 
       <div class="main">
-        <h2>Re: <%= subject(@notice) %></h2>
+        <% if @notice.subject.present? %>
+          <h2>Re: <%= subject(@notice) %></h2>
+        <% end %>
         <% if @notice.source.present? %>
           <p class="source"><%= Translation.t('notice_show_source') %> <%= @notice.source %></p>
         <% end %>
