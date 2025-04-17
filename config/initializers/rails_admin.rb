@@ -195,6 +195,13 @@ RailsAdmin.config do |config|
         configure :reset_type, :enum do
           label 'Type'
           required true
+          # as of 2022 this is still the only way to do this. disgusting.
+          # https://github.com/railsadminteam/rails_admin/issues/1815#issuecomment-1365565890
+          enum do
+            bindings[:object].send(enum_method).map do |t|
+              [t.constantize.label, t]
+            end
+          end
         end
 
         exclude_fields :topic_assignments,
