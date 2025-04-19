@@ -1,0 +1,14 @@
+<%= render 'notices/form_components/header',
+           label: Translation.t('notice_new_request_header') %>
+<%= simple_form_for(notice) do |form| %>
+  <section class="notice-body">
+    <%= Translation.t('notice_new_step_1') %>
+    <%= format(Translation.t('notice_new_provide_us'), type: Translation.t('notice_new_request_header')).html_safe %>
+    <%= render 'notices/form_components/main_metadata', form: form, subject: false %>
+    <%= render 'notices/form_components/additional_metadata',
+               form: form %>
+  </section>
+
+  <%= render 'notices/form_components/roles', form: form %>
+  <%= render 'notices/form_components/submit', form: form %>
+<% end %>

@@ -19,5 +19,5 @@ Lumen.const_set :TYPES_TO_TOPICS, {
   'Other'                 => Lumen::OTHER_TOPIC,
   'Placeholder'           => Lumen::OTHER_TOPIC
 }.freeze
-Lumen.const_set :TYPES, Lumen::TYPES_TO_TOPICS.keys
+Lumen.const_set :TYPES, %w[Request Ban Takedown Counternotice Response]
 Lumen.const_set :TOPICS, Lumen::TYPES_TO_TOPICS.values

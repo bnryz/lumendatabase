@@ -1,12 +1,12 @@
 <header>
-  <h3 class="title"><%= Translation.t('views_counternotice_form_title') %></h3>
-  <p><%= Translation.t('views_counternotice_form_info') %></p>
+  <h3 class="title"><%= Translation.t('views_response_form_title') %></h3>
+  <p><%= Translation.t('views_response_form_info') %></p>
   <p class="disclaimer"><%= Translation.t('views_notices_disclaimer') %></p>
 </header>
 <%= simple_form_for(notice) do |form| %>
   <section class="notice-body">
     <% Translation.t('notice_new_step_1') %>
-    <%= format(Translation.t('notice_new_provide_us'), type: Translation.t('notice_new_counternotice_header')).html_safe %>
+    <%= format(Translation.t('notice_new_provide_us'), type: Translation.t('notice_new_response_header')).html_safe %>
     <%= form.input :counternotice_for_id, as: :integer, placeholder: Translation.t('notice_new_counterfeit_counter_placeholder') %>
     <%= render 'notices/form_components/main_metadata',
                action_taken: false,
