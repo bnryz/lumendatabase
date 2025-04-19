@@ -1,5 +1,5 @@
 <% label = local_assigns[:label] || @notice.class.label %>
-<% step_number = 3 %>
+<% step_number = 2 %>
 <%= form.simple_fields_for(:entity_notice_roles) do |roles_form| %>
   <% role = roles_form.object.name %>
   <%# don't titleize the role until after the following line or it will break the css selector %>

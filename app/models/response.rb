@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-class Trademark < Notice
+class Response < Notice
+  DEFAULT_ENTITY_NOTICE_ROLES=(%w[recipient sender]).freeze
+
   load_elasticsearch_helpers
 
   def self.model_name

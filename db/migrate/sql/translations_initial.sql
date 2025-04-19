@@ -65,11 +65,11 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (35, 'topics_home_page_title', NULL, 'Topics', '2022-09-18 10:29:00.680516', '2022-09-18 10:29:00.680516');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (36, 'topics_home_recent', NULL, 'Recent Notices', '2022-09-18 10:29:37.952878', '2022-09-18 10:29:37.952878');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (37, 'topics_home_faq', NULL, 'Frequently Asked Questions', '2022-09-18 10:30:14.519965', '2022-09-18 10:30:14.519965');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (68, 'views_counternotice_form_title', NULL, 'Report a DMCA Counternotice', '2022-09-19 08:51:44.689006', '2022-09-19 08:51:44.689006');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (69, 'views_counternotice_form_info', NULL, 'If you have sent or received a DMCA counternotice and want to submit it to our database, fill out the form below.', '2022-09-19 08:52:00.917369', '2022-09-19 08:52:00.917369');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (68, 'views_counternotice_form_title', NULL, 'Report an Appeal', '2022-09-19 08:51:44.689006', '2022-09-19 08:51:44.689006');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (69, 'views_counternotice_form_info', NULL, 'If you have sent or received an appeal to a moderation action and want to submit it to our database, fill out the form below.', '2022-09-19 08:52:00.917369', '2022-09-19 08:52:00.917369');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (70, 'views_counternotice_form_step1_h', NULL, 'Describe the Notice', '2022-09-19 08:52:21.957873', '2022-09-19 08:52:21.957873');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (71, 'views_counternotice_form_step1_info', NULL, 'Provide us with information about the DMCA counternotice you <em>sent</em> or <em>received</em>.', '2022-09-19 08:52:37.895363', '2022-09-19 08:52:37.895363');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (72, 'views_counternotice_form_reason_h', NULL, 'Why are you requesting reinstatement?', '2022-09-19 08:52:58.668073', '2022-09-19 08:52:58.668073');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (71, 'views_counternotice_form_step1_info', NULL, 'Provide us with information about the appeal you <em>sent</em> or <em>received</em>.', '2022-09-19 08:52:37.895363', '2022-09-19 08:52:37.895363');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (72, 'views_counternotice_form_reason_h', NULL, 'For what reason are you appealing?', '2022-09-19 08:52:58.668073', '2022-09-19 08:52:58.668073');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (73, 'views_counternotice_form_body_label', NULL, 'Reason', '2022-09-19 08:53:13.99864', '2022-09-19 08:53:13.99864');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (74, 'views_counternotice_form_reasons_owner', NULL, 'I am the owner of the content', '2022-09-19 09:02:58.173946', '2022-09-19 09:02:58.173946');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (75, 'views_counternotice_form_reasons_authorized', NULL, 'I am not the owner, but I am authorized to use the content', '2022-09-19 09:03:17.083641', '2022-09-19 09:03:17.083641');
@@ -113,7 +113,7 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (48, 'submitter_widget_type_descriptions_Counterfeit', NULL, 'Are you a brand owner or brand representative requesting the removal of allegedly counterfeit content?', '2022-09-18 12:19:04.449316', '2022-09-18 12:19:04.449316');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (61, 'submitter_widget_roles_title_LawEnforcementRequest_Principal', NULL, 'Sending Agency, Department or Branch', '2022-09-18 13:51:31.644374', '2022-09-18 13:51:31.644374');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (49, 'notice_type_descriptions_DMCA', NULL, 'Is someone complaining that images, text, video, or other content found online infringe their copyrights?', '2022-09-18 12:26:40.251257', '2022-09-18 12:27:26.414915');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (50, 'notice_type_descriptions_Counternotice', NULL, 'Has someone complained that images, text, video, or other content you put online infringed their copyrights?', '2022-09-18 12:27:46.976168', '2022-09-18 12:27:46.976168');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (50, 'notice_type_descriptions_Counternotice', NULL, 'Was an appeal made in response to a moderation action or decision?', '2022-09-18 12:27:46.976168', '2022-09-18 12:27:46.976168');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (51, 'notice_type_descriptions_Trademark', NULL, 'Is someone complaining that images, text, video, other content found online, or some other form of online activity, infringe their trademark(s)?', '2022-09-18 12:28:11.873379', '2022-09-18 12:28:11.873379');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (52, 'notice_type_descriptions_Defamation', NULL, 'Is someone complaining that images, text, video, other content posted online, or some other form of online activity, defame, libel or slander them, or otherwise harm their reputation?', '2022-09-18 12:28:35.429203', '2022-09-18 12:28:35.429203');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (53, 'notice_type_descriptions_CourtOrder', NULL, 'Has a judge or court issued an order or injunction ordering the removal of images, text, video, or other content posted online, or the disabling of access to materials available online?', '2022-09-18 12:29:02.649283', '2022-09-18 12:29:02.649283');
@@ -178,11 +178,11 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (124, 'notice_new_roles_phone', NULL, 'Phone', '2022-09-19 14:52:07.306958', '2022-09-19 14:52:07.306958');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (125, 'notice_new_roles_email', NULL, 'Email', '2022-09-19 14:52:25.887481', '2022-09-19 14:52:25.887481');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (126, 'notice_new_roles_url', NULL, '%{role} URL', '2022-09-19 14:52:46.155679', '2022-09-19 14:52:46.155679');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (127, 'notice_new_report', NULL, 'Report a Demand', '2022-09-19 15:26:18.314736', '2022-09-19 15:26:18.314736');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (127, 'notice_new_report', NULL, 'Report a Moderation Action', '2022-09-19 15:26:18.314736', '2022-09-19 15:26:18.314736');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (128, 'submitter_widget_notice_new_what_type', NULL, '<h1>What type of takedown request are you making?</h1>', '2022-09-19 15:27:51.596898', '2022-09-19 15:27:51.596898');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (129, 'notice_new_works_enter', NULL, '<p>Enter information about the original work(s) and allegedly infringing URL(s).</p>', '2022-09-19 15:30:03.939801', '2022-09-19 15:30:03.939801');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (130, 'notice_new_step_1', NULL, '<h4><span>Step 1.</span> Describe the Notice</h4>', '2022-09-19 15:54:02.556744', '2022-09-19 15:54:02.556744');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (131, 'notice_new_provide_us', NULL, '<p>Provide us with information about the %{type} you <em>sent</em> or <em>received</em>.</p>', '2022-09-19 15:56:46.194111', '2022-09-19 15:56:46.194111');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (131, 'notice_new_provide_us', NULL, '<p>Provide information about the %{type}.</p>', '2022-09-19 15:56:46.194111', '2022-09-19 15:56:46.194111');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (132, 'notice_new_works_step_2', NULL, '<h4><span>Step 2.</span> Original Works in Question</h4>', '2022-09-19 16:39:26.708451', '2022-09-19 16:39:26.708451');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (133, 'notice_new_works_step_2_info', NULL, '<p>Enter information about the original work(s) and %{urls_type} URL(s).</p>', '2022-09-19 16:41:57.967583', '2022-09-19 16:41:57.967583');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (134, 'notice_new_public_disabled_title', NULL, 'Public Submission Disabled', '2022-09-19 16:45:18.364609', '2022-09-19 16:45:18.364609');
@@ -203,10 +203,7 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (146, 'notice_show_documents_supporting', NULL, 'Supporting Documents', '2022-09-19 18:54:49.85902', '2022-09-19 18:54:49.85902');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (147, 'notice_show_documents_supporting_see', NULL, 'Click here to get access to this file', '2022-09-19 18:55:53.23948', '2022-09-19 18:55:53.23948');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (148, 'notice_show_documents_supporting_type', NULL, 'Supporting %{type}', '2022-09-19 18:56:47.936802', '2022-09-19 18:56:47.936802');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (149, 'notice_new_select_info', NULL, '<h1>Which type of demand would you like to report?</h1>
-<p>
-  <b>To help us serve you better, we ask that you submit only notices you have received, not items you have heard about second-hand, and that you add only information whose accuracy you can verify. We may mask additional identifying information before making the notice publicly viewable.</b>
-</p>', '2022-09-19 18:58:29.572878', '2022-09-19 19:00:15.261835');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (149, 'notice_new_select_info', NULL, '<h1>Which type of moderation action would you like to report?</h1>', '2022-09-19 18:58:29.572878', '2022-09-19 19:00:15.261835');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (150, 'notice_show_rescinded', NULL, '<h3>Notice Rescinded</h3>', '2022-09-19 19:01:26.366621', '2022-09-19 19:01:26.366621');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (151, 'rss_recent_notices_title', NULL, 'Recent Notices from Lumen Database', '2022-09-19 19:02:28.900611', '2022-09-19 19:02:28.900611');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (152, 'rss_recent_notices_author', NULL, 'Lumen Database', '2022-09-19 19:03:12.600153', '2022-09-19 19:03:12.600153');
@@ -256,9 +253,9 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (197, 'notice_show_counterfeit_works_label', NULL, '<h4>Counterfeit claim #%{index}</h4>', '2022-09-20 09:27:55.39482', '2022-09-20 09:28:20.804354');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (198, 'notice_new_counterfeit_step_2_desc', NULL, '<h4><span>Step 2.</span> Works in Question</h4>
 <p>Enter information about the works which have been removed or to which access has been disabled.</p>', '2022-09-20 09:30:17.739678', '2022-09-20 09:30:17.739678');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (199, 'notice_new_counterfeit_counter_placeholder', NULL, 'Lumen DMCA Notice ID (if available)', '2022-09-20 09:31:46.381331', '2022-09-20 09:31:46.381331');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (199, 'notice_new_counterfeit_counter_placeholder', NULL, 'Notice ID (if available)', '2022-09-20 09:31:46.381331', '2022-09-20 09:31:46.381331');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (200, 'notice_show_counternotice_body', NULL, 'Body', '2022-09-20 09:36:48.817953', '2022-09-20 09:36:48.817953');
-INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (201, 'notice_show_counternotice_for', NULL, 'Counternotice for', '2022-09-20 09:49:29.589144', '2022-09-20 09:49:29.589144');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (201, 'notice_show_counternotice_for', NULL, 'Appeal for', '2022-09-20 09:49:29.589144', '2022-09-20 09:49:29.589144');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (202, 'notice_show_court_regulations_label', NULL, 'Laws Referenced by Court Order', '2022-09-20 09:51:16.151805', '2022-09-20 09:51:16.151805');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (203, 'notice_show_court_body', NULL, 'Explanation of Court Order', '2022-09-20 09:52:50.118293', '2022-09-20 09:52:50.118293');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (204, 'notice_show_court_header', NULL, 'Court Order takedown notice', '2022-09-20 09:55:59.183772', '2022-09-20 09:55:59.183772');
@@ -318,13 +315,24 @@ INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) V
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (237, 'notice_show_priv_inf_works_label', NULL, '<h4>Complaint %{index}</h4>', '2022-09-21 08:11:39.595988', '2022-09-21 08:11:39.595988');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (238, 'notice_show_tradem_works_label', NULL, '<h4>Complaint %{index}</h4>', '2022-09-21 08:12:24.438777', '2022-09-21 08:12:24.438777');
 INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (240, 'api_submitter_widget_request_page_title', NULL, 'Apply for submitter JS plugin access', '2022-09-21 10:08:42.999228', '2022-09-21 10:08:42.999228');
-
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (241, 'notice_type_descriptions_Request', NULL, 'Did someone request that a moderation action be taken?', '2025-04-16 23:04:34', '2025-04-16 23:04:34');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (242, 'notice_new_request_header', NULL, 'moderation action request', '2025-04-16 23:04:47', '2025-04-16 23:04:47');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (243, 'notice_type_descriptions_Ban', NULL, 'Was an account on a platform banned?', '2025-04-19 00:07:11', '2025-04-19 00:07:11');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (244, 'notice_new_ban_header', NULL, 'account ban notice', '2025-04-19 00:07:33', '2025-04-19 00:07:33');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (245, 'notice_type_descriptions_Takedown', NULL, 'Was content on a platform taken down <b>without</b> the originating account being banned?', '2025-04-19 00:07:55', '2025-04-19 00:07:55');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (246, 'notice_new_takedown_header', NULL, 'content takedown notice', '2025-04-19 00:08:12', '2025-04-19 00:08:12');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (247, 'notice_new_counternotice_header', NULL, 'moderation action appeal', '2025-04-19 00:08:32', '2025-04-19 00:08:32');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (248, 'views_response_form_title', NULL, 'Report an Response', '2025-04-19 00:08:51', '2025-04-19 00:08:51');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (249, 'views_response_form_info', NULL, 'If you have sent or received a response regarding a moderation action and want to submit it to our database, fill out the form below.', '2025-04-16 05:39:17', '2025-04-16 05:39:17');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (250, 'notice_type_descriptions_Response', NULL, 'Was a response sent regarding a moderation appeal or request?', '2025-04-19 00:09:16', '2025-04-19 00:09:16');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (251, 'notice_new_response_header', NULL, 'response', '2025-04-19 00:09:32', '2025-04-19 00:039:32');
+INSERT INTO public.translations (id, key, notes, body, created_at, updated_at) VALUES (252, 'notice_show_response_for', NULL, 'Response For', '2025-04-19 00:00:46', '2025-04-16 00:09:46');
 
 --
 -- Name: translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: lumen
 --
 
-SELECT pg_catalog.setval('public.translations_id_seq', 240, true);
+SELECT pg_catalog.setval('public.translations_id_seq', 252, true);
 
 
 --

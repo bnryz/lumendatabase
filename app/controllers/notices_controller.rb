@@ -35,6 +35,8 @@ class NoticesController < ApplicationController
     @notice = NoticeBuilder.new(
       get_notice_type(params), notice_params, current_user
     ).build
+    @notice.works_attributes = [{}]
+    @notice.hidden = authorized_to_create?
 
     respond_to do |format|
       if @notice.valid?
@@ -46,7 +48,7 @@ class NoticesController < ApplicationController
       else
         LumenLogger.log_metrics('FAILED_CREATE_NEW_NOTICE', notice_errors: @notice.errors)
 
-        flash.alert = 'Notice creation failed. See errors below.'
+        flash.alert = 'Report creation failed. See errors below.'
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: { notices: @notice.errors }, status: :unprocessable_entity }
       end

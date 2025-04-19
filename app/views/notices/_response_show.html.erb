@@ -7,7 +7,7 @@
 
 <% if notice.counternotice_for_id || notice.counternotice_for_sid %>
   <dl class="counternotice-for">
-      <span class="label"><%= Translation.t('notice_show_counternotice_for') %>:</span>
+      <span class="label"><%= Translation.t('notice_show_response_for') %>:</span>
       <span class="field">
         <% if notice.counternotice_for_id %>
           <% url = notice_url(id: notice.counternotice_for_id) %>

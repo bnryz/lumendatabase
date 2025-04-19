@@ -39,9 +39,9 @@ class NoticeBuilder
 
   def generic_title
     if recipient_name.present?
-      "#{model_class.label} notice to #{recipient_name}"
+      "#{model_class.label} action against #{recipient_name}"
     else
-      "#{model_class.label} notice"
+      "#{model_class.label} action"
     end
   end
 
