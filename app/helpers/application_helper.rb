@@ -11,7 +11,7 @@ module ApplicationHelper
     full_title = [
       page_description,
       page_header,
-      'Lumen'
+      ENV['SITE_NAME']
     ].compact.join(' :: ')
 
     content_for(:title) { full_title }
