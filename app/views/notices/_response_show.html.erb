@@ -15,7 +15,7 @@
           <% url = notice_by_sid_url(id: notice.counternotice_for_sid) %>
         <% end %>
 
-        <%= link_to(url, url) %>
+        <%= link_to(Notice.find(notice.counternotice_for_id).title, url) %>
       </span>
   </dl>
 <% end %>
