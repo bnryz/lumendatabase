@@ -3,6 +3,8 @@ risk_trigger = RiskTrigger.create!(
   matching_type: 'all'
 )
 
+RiskTriggerCondition.reset_column_information
+
 RiskTriggerCondition.create!(
   field: 'submitter.country_code',
   value: 'us',
