@@ -9,7 +9,6 @@ class NoticesController < ApplicationController
   PLACEHOLDER_WORKS = [Lumen::UNKNOWN_WORK].freeze
 
   def new
-    (render :submission_disabled and return) if cannot?(:submit, Notice)
     (render :select_type and return) if params[:type].blank?
 
     build_new_notice
@@ -33,8 +32,6 @@ class NoticesController < ApplicationController
   # from that commit, but make sure to wrap ready_for_persistence? in a
   # transaction.
   def create
-    return unauthorized_response unless authorized_to_create?
-
     @notice = NoticeBuilder.new(
       get_notice_type(params), notice_params, current_user
     ).build
@@ -43,7 +40,7 @@ class NoticesController < ApplicationController
       if @notice.valid?
         @notice.save
         @notice.mark_for_review
-        flash.notice = "Notice created! It can be found at #{notice_url(@notice)}"
+        flash.notice = 'Your report has been submitted for review!'
         format.json { head :created, location: @notice }
         format.html { redirect_to new_notice_url }
       else
