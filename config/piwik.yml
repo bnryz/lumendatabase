@@ -12,12 +12,12 @@
 production:
   id_site: 3
   url: stats.berkman.harvard.edu
-  disabled: false
+  disabled: true
 
 development:
   id_site: 4
   url: stats.berkman.harvard.edu
-  disabled: false
+  disabled: true
 
 test:
   id_site: 4
